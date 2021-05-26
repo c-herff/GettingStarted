@@ -15,7 +15,6 @@ def locate_pos(available_ts, target_ts):
     target_ts: float
         Time stamp that should be found in list of time stamps
 
-
     Returns
     ----------
     pos: integer 
