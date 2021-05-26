@@ -6,6 +6,21 @@ from scipy.signal import decimate
 
 ## Find timestamps that are the best match
 def locate_pos(available_ts, target_ts):
+    """Finds best fitting time point.
+    
+    Parameters
+    ----------
+    available_ts: array of floats 
+        Time stamps of time series
+    target_ts: float
+        Time stamp that should be found in list of time stamps
+
+
+    Returns
+    ----------
+    pos: integer 
+        index of time stamp with smallest distance from target_ts
+    """
     pos = bisect.bisect_right(available_ts, target_ts)
     if pos == 0:
         return 0
