@@ -215,7 +215,7 @@ if __name__=="__main__":
             scaled = np.int16(audio/np.max(np.abs(audio)) * 32767)
             wav.write(outPath + p + '_' + str(ses)  + '_orig_audio.wav',audioSamplingRate,scaled)   
             # Extact log mel-scaled spectrograms
-            melSpec = extractMelSpecs(scaled,audioSamplingRate,windowLength=winL,frameshift=frameshift,numFilter=)
+            melSpec = extractMelSpecs(scaled,audioSamplingRate,windowLength=winL,frameshift=frameshift,numFilter=23)
             # Raw audio aligned to each window (for unit selection)
             winAudio = windowAudio(scaled, audioSamplingRate,windowLength=winL,frameshift=frameshift)
             
