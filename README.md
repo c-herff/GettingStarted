@@ -21,3 +21,9 @@ In this example, we use a single word speech experiment data set.
 2. Calculates high gamma features
 3. Calculates logarithmic mel-scaled spectrograms
 4. Saves everything
+
+### classification_example.py
+1. Loads the features from process_data
+2. Transforms spectrograms into binary labels (speech yes or no)
+3. Trains and evaluates LDA on the features in a k-fold cross-validation
+
